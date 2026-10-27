@@ -1,0 +1,51 @@
+name: Signaler un problème
+description: Quelque chose ne marche pas comme prévu dans Mon RDV Ping
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de signaler ce problème.
+        **Ce ticket est public** : n'écrivez jamais de numéro de licence, de nom de joueur ni d'adresse e-mail.
+        Pour une demande personnelle (ne plus apparaître, question sur vos données), écrivez à monrdvping@outlook.fr.
+  - type: input
+    id: version
+    attributes:
+      label: Version de l'application
+      description: En haut de l'écran Réglages (roue dentée), par exemple 0.23.0
+      placeholder: 0.23.0
+    validations:
+      required: true
+  - type: input
+    id: telephone
+    attributes:
+      label: Téléphone et version d'Android
+      placeholder: Samsung Galaxy A52, Android 14
+  - type: dropdown
+    id: ecran
+    attributes:
+      label: Écran concerné
+      options:
+        - Matchs
+        - Fiche rencontre
+        - Équipe (classement, résultats, joueurs)
+        - Feuille de match
+        - Compo (capitaine)
+        - Ma fiche
+        - Réglages
+        - Autre
+    validations:
+      required: true
+  - type: textarea
+    id: probleme
+    attributes:
+      label: Ce qui s'est passé
+      description: Ce que vous avez fait, ce que vous attendiez, ce qui s'est affiché à la place
+    validations:
+      required: true
+  - type: textarea
+    id: reproduire
+    attributes:
+      label: Pour le reproduire (facultatif)
+      placeholder: "1. Ouvrir l'onglet Compo  2. ..."
