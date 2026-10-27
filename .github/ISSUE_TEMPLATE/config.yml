@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "Demande personnelle (ne plus apparaître, question sur vos données)"
+    url: "https://mon-rdv-ping.github.io/#vous-apparaissez"
+    about: "Ne passez pas par un ticket public. Écrivez à monrdvping@outlook.fr (procédure sur cette page)."
+  - name: "Politique de confidentialité et informations"
+    url: "https://mon-rdv-ping.github.io/"
+    about: "Ce que l'application affiche, ce qu'elle garde, comment ne plus apparaître."
