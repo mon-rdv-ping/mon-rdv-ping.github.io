@@ -1,0 +1,31 @@
+name: Proposer une idée
+description: Une amélioration ou une nouvelle fonction pour Mon RDV Ping
+title: "[Idée] "
+labels: ["amélioration"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Ce ticket est public** : n'écrivez jamais de numéro de licence, de nom de joueur ni d'adresse e-mail.
+        L'application suit les conditions d'utilisation de la FFTT et le RGPD : certaines idées ne pourront pas être retenues (par exemple garder des résultats plus de 24 heures, ou analyser d'autres joueurs).
+  - type: dropdown
+    id: role
+    attributes:
+      label: Vous êtes
+      options:
+        - Joueur ou joueuse
+        - Capitaine
+        - Parent, proche ou supporter
+        - Dirigeant ou entraîneur
+        - Autre
+  - type: textarea
+    id: besoin
+    attributes:
+      label: Votre besoin
+      description: Ce que vous voudriez pouvoir faire, et pourquoi
+    validations:
+      required: true
+  - type: textarea
+    id: idee
+    attributes:
+      label: Votre idée de solution (facultatif)
