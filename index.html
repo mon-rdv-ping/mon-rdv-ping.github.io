@@ -35,7 +35,7 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
 <header>
   <div class="k">Application indépendante, non officielle</div>
   <h1>Mon RDV Ping</h1>
-  <p>Application Android gratuite pour les joueurs et capitaines du championnat par équipes de tennis de table. Elle n'est ni publiée par la Fédération française de tennis de table (FFTT), ni par un club. Sans compte, sans serveur, sans publicité.</p>
+  <p>Application Android gratuite pour les joueurs, capitaines et supporters du championnat par équipes de tennis de table. Elle n'est ni publiée par la Fédération française de tennis de table (FFTT), ni par un club. Sans compte, sans serveur, sans publicité.</p>
   <nav aria-label="Sur cette page">
     <a href="#vous-apparaissez">Vous apparaissez dans l'application ?</a>
     <a href="#confidentialite">Politique de confidentialité</a>
@@ -49,6 +49,14 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
 <p>Si vous êtes licencié à la FFTT et jouez en championnat par équipes, l'application peut afficher certaines de vos données sportives, telles que la FFTT les publie.</p>
 <h3>D'où viennent les données</h3>
 <p>Uniquement de l'API de la FFTT (interfaces Smartping), sous réserve de son accord. Aucune autre source : ni le site de la FFTT, ni une autre application, ni un relevé manuel. Les résultats officiels font foi.</p>
+<h3>Où vous pouvez apparaître</h3>
+<ul>
+<li>Votre fiche de joueur, si un utilisateur l'ouvre.</li>
+<li>Les feuilles de match et le bilan de votre équipe.</li>
+<li>La liste des « joueurs déjà alignés » et les compos passées de votre équipe, vues par une équipe adverse.</li>
+<li>La simulation d'une rencontre : l'utilisateur choisit quatre joueurs de chaque côté et voit seulement les écarts de points, sans pronostic.</li>
+<li>L'effectif et la convocation préparés par un capitaine de votre club (prénom dans la convocation).</li>
+</ul>
 <h3>Ce qui est affiché</h3>
 <div class="tw"><table>
 <thead><tr><th>Donnée</th><th>Joueur adulte</th><th>Joueur mineur ou d'âge inconnu</th></tr></thead>
@@ -58,51 +66,54 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
 <tr><td>Points mensuels, évolution par phase</td><td>Sur votre fiche</td><td>Non</td></tr>
 <tr><td>Points qu'un autre joueur peut gagner ou perdre contre vous</td><td>Sur votre fiche seulement</td><td>Non</td></tr>
 <tr><td>Catégorie d'âge, numéro de licence</td><td>Non</td><td>Non</td></tr>
-<tr><td>Analyse de vos résultats (forme, niveau des adversaires)</td><td>Non</td><td>Non</td></tr>
-<tr><td>Suivi par un autre utilisateur</td><td>Par un adulte de votre club</td><td>Non</td></tr>
+<tr><td>Analyse de vos résultats, liste de vos parties, meilleure victoire</td><td>Non</td><td>Non</td></tr>
+<tr><td>Suivi par un autre utilisateur</td><td>Par tout utilisateur qui a choisi votre club, sans que vous en soyez prévenu</td><td>Non</td></tr>
 </tbody></table></div>
-<p>Ne sont jamais affichés : date de naissance, certificat médical, sexe, nationalité, date de mutation, coordonnées, grades. Les données des licenciés ne sont gardées sur le téléphone de l'utilisateur que 24 heures au plus, et ne sont envoyées à personne.</p>
+<p>Ne sont jamais affichés : date de naissance, certificat médical, sexe, nationalité, date de mutation, coordonnées, grades. Vos nom, points et résultats ne sont gardés sur le téléphone de l'utilisateur que 24 heures au plus ; seul votre numéro de licence peut y rester plus longtemps, si l'utilisateur vous suit ou vous a mis dans son effectif (voir le tableau plus bas). Rien n'est envoyé à l'éditeur.</p>
 <h3>Ne plus apparaître</h3>
-<div class="box"><p>Écrivez à <a href="mailto:monrdvping@outlook.fr">monrdvping@outlook.fr</a> avec votre numéro de licence, votre nom et votre club. Vous n'avez pas à vous justifier. Un parent peut le demander pour son enfant, en l'indiquant dans le message. Vous recevez un accusé de réception, et le masquage est appliqué dans un délai d'un mois au plus, avec la mise à jour suivante de l'application.</p></div>
-<p>Votre numéro de licence est alors conservé sous forme d'empreinte, dans ce seul but. Cette empreinte est une donnée pseudonyme, pas anonyme. Pour l'accès ou la rectification de vos données sportives, adressez-vous à la FFTT : <a href="mailto:informatique@fftt.email">informatique@fftt.email</a>.</p>
+<div class="box"><p>Écrivez à <a href="mailto:monrdvping@outlook.fr">monrdvping@outlook.fr</a> avec votre numéro de licence, votre nom et votre club. Vous n'avez pas à vous justifier. Un parent peut le demander pour son enfant, en l'indiquant dans le message. Vous recevez un accusé de réception, et le masquage est appliqué dans un délai d'un mois au plus, avec la mise à jour suivante de l'application : votre nom est alors remplacé par « Joueur masqué » sur tous les écrans, et vous ne pouvez plus être suivi.</p></div>
+<p>Votre numéro de licence est alors conservé sous forme d'empreinte volontairement tronquée, dans ce seul but : elle masque aussi quelques autres licenciés et ne désigne personne en particulier. C'est une donnée pseudonyme, pas anonyme. Pour l'accès ou la rectification de vos données sportives, adressez-vous à la FFTT : <a href="mailto:informatique@fftt.email">informatique@fftt.email</a>.</p>
 </section>
 
 <section id="confidentialite">
 <h2>Politique de confidentialité</h2>
-<p><b>En bref :</b> l'application n'envoie aucune donnée à son éditeur. Ce que l'utilisateur saisit reste sur son téléphone, et les données de la FFTT n'y sont gardées que 24 heures au plus.</p>
+<p><b>En bref :</b> l'application n'envoie aucune donnée à son éditeur. Ce que l'utilisateur saisit reste sur son téléphone, et les données de la FFTT n'y sont gardées que 24 heures au plus, sauf les numéros listés ci-dessous.</p>
 <h3>Responsable du traitement</h3>
 <p>Frédéric VASSEUR, particulier, éditeur à titre personnel et non professionnel : <a href="mailto:monrdvping@outlook.fr">monrdvping@outlook.fr</a>. Il n'a accès à aucune donnée des téléphones.</p>
 <h3>Ce qui reste plus de 24 heures sur le téléphone de l'utilisateur</h3>
 <div class="tw"><table>
 <thead><tr><th>Donnée</th><th>Pourquoi</th><th>Durée</th></tr></thead>
 <tbody>
-<tr><td>Club, nom court, équipes suivies (6 au plus, dont celles d'autres clubs), rôle par équipe</td><td>Afficher ses équipes</td><td>Jusqu'à modification</td></tr>
+<tr><td>Club, nom court, équipes suivies (6 au plus, dont celles d'autres clubs), rôle par équipe (joueur, capitaine ou supporter)</td><td>Afficher ses équipes</td><td>Jusqu'à modification</td></tr>
 <tr><td>Sa licence (facultative)</td><td>Afficher sa fiche</td><td>Jusqu'à effacement</td></tr>
-<tr><td>Licences des joueurs suivis (adultes de son club)</td><td>Afficher leur fiche</td><td>Jusqu'à retrait</td></tr>
-<tr><td>Effectif du capitaine (numéros de licence)</td><td>Préparer la compo</td><td>Jusqu'à retrait</td></tr>
+<tr><td>Licences des joueurs suivis (adultes du club choisi)</td><td>Afficher leur fiche</td><td>Jusqu'à retrait</td></tr>
+<tr><td>Licences de l'effectif du capitaine</td><td>Préparer la compo</td><td>Jusqu'à retrait, au plus tard à la fin de la saison (30 juin)</td></tr>
 <tr><td>Compo, disponibilités, heure et lieu de rendez-vous</td><td>Préparer la rencontre et la convocation</td><td>Effacés le lendemain du match</td></tr>
 <tr><td>Date et identifiant de la prochaine rencontre</td><td>Rappel de la veille, s'il est activé</td><td>Jusqu'au rappel</td></tr>
 <tr><td>Empreinte du dernier résultat vu, par poule</td><td>Savoir si un résultat est nouveau, si les notifications sont activées</td><td>Remplacée à chaque vérification</td></tr>
-<tr><td>Liste d'opposition (empreintes de licences)</td><td>Ne plus afficher ceux qui l'ont demandé</td><td>Tant que l'opposition vaut</td></tr>
+<tr><td>Liste d'opposition (empreintes tronquées de licences)</td><td>Ne plus afficher ceux qui l'ont demandé</td><td>Tant que l'opposition vaut</td></tr>
+<tr><td>Dernière consigne du fichier de configuration</td><td>Arrêt à distance, version minimale</td><td>Remplacée à chaque lecture</td></tr>
 </tbody></table></div>
-<p>Les réponses de l'API de la FFTT sont gardées en cache 24 heures au plus. Tout est stocké dans l'espace privé de l'application, exclu de la sauvegarde cloud d'Android.</p>
+<p>Les réponses de l'API de la FFTT sont gardées en cache 24 heures au plus : noms, points, résultats et feuilles de match ne sont jamais conservés au-delà. Tout est stocké dans l'espace privé de l'application, exclu de la sauvegarde cloud et du transfert entre appareils d'Android.</p>
 <h3>Bases légales</h3>
 <ul>
 <li>Réglages de l'utilisateur : exécution des conditions d'utilisation qu'il accepte (RGPD, art. 6.1.b).</li>
 <li>Effectif, compo et disponibilités : intérêt légitime du capitaine à organiser son équipe (art. 6.1.f).</li>
 <li>Affichage des données sportives : intérêt légitime, pour des données publiées par la FFTT pour la vie sportive (art. 6.1.f), avec une protection renforcée des mineurs.</li>
+<li>Fichier de configuration : intérêt légitime de l'éditeur à pouvoir arrêter l'application (art. 6.1.f).</li>
 <li>Demandes d'opposition : obligation légale.</li>
 </ul>
 <h3>Ce qui quitte le téléphone</h3>
 <ul>
-<li><b>Vers la FFTT</b> : les demandes faites à son API (numéro de série de l'application, numéros de club, d'équipe ou de licence consultés). La FFTT voit l'adresse IP du téléphone.</li>
-<li><b>Vers l'application de partage choisie</b>, seulement si le capitaine partage une convocation.</li>
+<li><b>Vers la FFTT</b> : les demandes faites à son API (numéro de série de l'application, club recherché, numéros de club, d'équipe ou de licence consultés). La FFTT voit l'adresse IP du téléphone.</li>
+<li><b>Vers GitHub</b> (GitHub, Inc., États-Unis) : au démarrage, au plus une fois par jour, la lecture du fichier de configuration de l'application (mon-rdv-ping.github.io/config.json). GitHub voit l'adresse IP du téléphone, rien d'autre. Ce transfert est encadré par le cadre de protection des données UE–États-Unis (Data Privacy Framework).</li>
+<li><b>Vers l'application de partage choisie</b>, seulement si le capitaine partage une convocation : journée, date, rencontre, salle et adresse, prénoms des joueurs convoqués.</li>
 <li><b>Vers Google Maps</b>, seulement si l'utilisateur ouvre un itinéraire.</li>
 <li><b>Vers l'agenda du téléphone</b>, seulement si l'utilisateur y ajoute une rencontre : date, équipe adverse et salle, sans nom de joueur.</li>
 </ul>
 <p>Aucune publicité, aucun outil de mesure d'audience, aucun traceur, aucun identifiant publicitaire. Google Play fournit à l'éditeur des statistiques de plantage agrégées et anonymes, sans donnée de licencié.</p>
 <h3>Mineurs</h3>
-<p>Pour un licencié de moins de 18 ans, ou dont l'âge n'est pas connu, l'application n'affiche que son nom, son club, ses points et son bilan de la saison, et il ne peut pas être suivi. Elle ne demande ni compte, ni âge, ni identité à ses utilisateurs. Public visé sur Google Play : 13 ans et plus.</p>
+<p>Pour un licencié de moins de 18 ans, ou dont l'âge n'est pas connu, l'application n'affiche que son nom, son club, ses points et son bilan de la saison, et il ne peut pas être suivi. En cas de doute (homonyme, catégorie absente), le joueur est traité comme un mineur. L'application ne demande ni compte, ni âge, ni identité à ses utilisateurs : elle ne peut donc pas vérifier qu'une licence saisie comme « ta licence » est bien celle de l'utilisateur, seulement qu'elle appartient au club choisi. Pour une licence de mineur, la fiche reste réduite. Public visé sur Google Play : 13 ans et plus.</p>
 <h3>Vos droits</h3>
 <ul>
 <li>Utilisateur : effacer toutes ses données dans Réglages › Effacer toutes mes données, ou en désinstallant l'application.</li>
@@ -110,9 +121,9 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
 <li>Question : <a href="mailto:monrdvping@outlook.fr">monrdvping@outlook.fr</a>. Réclamation : Commission nationale de l'informatique et des libertés, <a href="https://www.cnil.fr">cnil.fr</a>.</li>
 </ul>
 <h3>Ce site</h3>
-<p>Cette page est une page statique hébergée par GitHub Pages (GitHub, Inc., États-Unis), qui voit l'adresse IP des visiteurs dans ses journaux techniques. Ce transfert hors de l'Union européenne est encadré : GitHub adhère au cadre de protection des données UE–États-Unis (Data Privacy Framework). La page ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience.</p>
+<p>La page web de l'application et son fichier de configuration sont hébergés par GitHub Pages (GitHub, Inc., États-Unis), qui voit l'adresse IP des visiteurs et des téléphones dans ses journaux techniques, dans le cadre du Data Privacy Framework. La page ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience.</p>
 <h3>Modifications</h3>
-<p>Toute modification de cette politique est datée ci-dessous et signalée à la mise à jour suivante de l'application.</p>
+<p>Ce texte est le même sur la page web et dans l'application. Toute modification est datée et signalée à la mise à jour suivante de l'application. Version du 27 octobre 2026.</p>
 </section>
 
 <section id="signaler">
@@ -130,7 +141,7 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
 <p><b>Source des données sportives</b> : Fédération française de tennis de table (FFTT), 3 rue Dieudonné Costes, 75013 Paris, via ses interfaces Smartping, dans le respect de leurs conditions générales d'utilisation. Application indépendante, non officielle, non affiliée à la FFTT.</p>
 </section>
 
-<footer>Version du 25 octobre 2026 · Mon RDV Ping</footer>
+<footer>Version du 27 octobre 2026 · Mon RDV Ping · Android 8 et plus, distribuée uniquement par Google Play</footer>
 </main>
 </body>
 </html>
