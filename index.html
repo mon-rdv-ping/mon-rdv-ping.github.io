@@ -53,7 +53,7 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
 <ul>
 <li>Votre fiche de joueur, si un utilisateur l'ouvre.</li>
 <li>Les feuilles de match et le bilan de votre équipe.</li>
-<li>La liste des « joueurs déjà alignés » et les compos passées de votre équipe, vues par une équipe adverse.</li>
+<li>La liste des « joueurs déjà alignés » et les compos passées de votre équipe, vues par tout utilisateur qui suit votre poule, notamment vos adversaires.</li>
 <li>La simulation d'une rencontre : l'utilisateur choisit quatre joueurs de chaque côté et voit seulement les écarts de points, sans pronostic.</li>
 <li>L'effectif et la convocation préparés par un capitaine de votre club (prénom dans la convocation).</li>
 </ul>
@@ -61,17 +61,19 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
 <div class="tw"><table>
 <thead><tr><th>Donnée</th><th>Joueur adulte</th><th>Joueur mineur ou d'âge inconnu</th></tr></thead>
 <tbody>
-<tr><td>Nom, club, points officiels, bilan de la saison</td><td>Oui</td><td>Oui</td></tr>
+<tr><td>Nom, club, points officiels, bilan en championnat par équipes</td><td>Oui</td><td>Oui</td></tr>
 <tr><td>Résultat de vos parties sur une feuille de match</td><td>Oui</td><td>Oui, sans aucun calcul</td></tr>
 <tr><td>Points mensuels, évolution par phase</td><td>Sur votre fiche</td><td>Non</td></tr>
 <tr><td>Points qu'un autre joueur peut gagner ou perdre contre vous</td><td>Sur votre fiche seulement</td><td>Non</td></tr>
 <tr><td>Catégorie d'âge, numéro de licence</td><td>Non</td><td>Non</td></tr>
+<tr><td>Type de licence, licence validée ou non, fait d'être muté</td><td>Seulement dans les vérifications d'un utilisateur qui se déclare capitaine dans votre club et vous choisit dans sa compo</td><td>Idem</td></tr>
 <tr><td>Analyse de vos résultats, liste de vos parties, meilleure victoire</td><td>Non</td><td>Non</td></tr>
-<tr><td>Suivi par un autre utilisateur</td><td>Par tout utilisateur qui a choisi votre club, sans que vous en soyez prévenu</td><td>Non</td></tr>
+<tr><td>Suivi par un autre utilisateur</td><td>Par tout utilisateur qui déclare votre club (l'appartenance n'est pas vérifiée) ; vous n'en êtes pas averti, et il ne reçoit aucune notification sur vos résultats</td><td>Non</td></tr>
 </tbody></table></div>
-<p>Ne sont jamais affichés : date de naissance, certificat médical, sexe, nationalité, date de mutation, coordonnées, grades. Vos nom, points et résultats ne sont gardés sur le téléphone de l'utilisateur que 24 heures au plus ; seul votre numéro de licence peut y rester plus longtemps, si l'utilisateur vous suit ou vous a mis dans son effectif (voir le tableau plus bas). Rien n'est envoyé à l'éditeur.</p>
+<p>Ne sont jamais affichés : date de naissance, certificat médical, sexe, nationalité, date de mutation, coordonnées, grades. Vos nom, points et résultats ne sont gardés sur le téléphone de l'utilisateur que 24 heures au plus ; seul votre numéro de licence peut y rester plus longtemps, si l'utilisateur vous suit ou vous a mis dans son effectif (voir le tableau « Ce qui reste plus de 24 heures »). Rien n'est envoyé à l'éditeur.</p>
+<p><b>Limite.</b> L'application ne demande ni compte ni identité. Une personne qui connaît votre numéro de licence et déclare votre club peut afficher votre fiche comme si c'était la sienne : pour un adulte, avec la catégorie d'âge, la liste de vos parties, votre meilleure victoire et l'analyse de votre saison ; pour un mineur ou un joueur d'âge inconnu, rien de plus que le nom, le club, les points et le bilan. Si vous ne le souhaitez pas, vous pouvez demander à ne plus apparaître.</p>
 <h3>Ne plus apparaître</h3>
-<div class="box"><p>Écrivez à <a href="mailto:monrdvping@outlook.fr">monrdvping@outlook.fr</a> avec votre numéro de licence, votre nom et votre club. Vous n'avez pas à vous justifier. Un parent peut le demander pour son enfant, en l'indiquant dans le message. Vous recevez un accusé de réception, et le masquage est appliqué dans un délai d'un mois au plus, avec la mise à jour suivante de l'application : votre nom est alors remplacé par « Joueur masqué » sur tous les écrans, et vous ne pouvez plus être suivi.</p></div>
+<div class="box"><p>Écrivez à <a href="mailto:monrdvping@outlook.fr">monrdvping@outlook.fr</a> avec votre numéro de licence, votre nom et votre club. Vous n'avez pas à vous justifier. Un parent peut le demander pour son enfant, en l'indiquant dans le message. Vous recevez un accusé de réception, et le masquage est appliqué dans un délai d'un mois au plus, avec la mise à jour suivante de l'application : votre nom est alors remplacé par « Joueur masqué » sur tous les écrans, et vous ne pouvez plus être suivi. Le masquage vaut pour tous les utilisateurs, vous compris. Votre message est reçu dans une boîte Outlook.com (Microsoft) et supprimé dès la réponse envoyée.</p></div>
 <p>Votre numéro de licence est alors conservé sous forme d'empreinte volontairement tronquée, dans ce seul but : elle masque aussi quelques autres licenciés et ne désigne personne en particulier. C'est une donnée pseudonyme, pas anonyme. Pour l'accès ou la rectification de vos données sportives, adressez-vous à la FFTT : <a href="mailto:informatique@fftt.email">informatique@fftt.email</a>.</p>
 </section>
 
@@ -107,21 +109,21 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
 <ul>
 <li><b>Vers la FFTT</b> : les demandes faites à son API (numéro de série de l'application, club recherché, numéros de club, d'équipe ou de licence consultés). La FFTT voit l'adresse IP du téléphone.</li>
 <li><b>Vers GitHub</b> (GitHub, Inc., États-Unis) : au démarrage, au plus une fois par jour, la lecture du fichier de configuration de l'application (mon-rdv-ping.github.io/config.json). GitHub voit l'adresse IP du téléphone, rien d'autre. Ce transfert est encadré par le cadre de protection des données UE–États-Unis (Data Privacy Framework).</li>
-<li><b>Vers l'application de partage choisie</b>, seulement si le capitaine partage une convocation : journée, date, rencontre, salle et adresse, prénoms des joueurs convoqués.</li>
+<li><b>Vers l'application de partage choisie</b>, seulement si le capitaine partage une convocation : journée, date, rencontre, salle et adresse avec un lien d'itinéraire, heure et lieu de rendez-vous, prénoms des joueurs convoqués.</li>
 <li><b>Vers Google Maps</b>, seulement si l'utilisateur ouvre un itinéraire.</li>
 <li><b>Vers l'agenda du téléphone</b>, seulement si l'utilisateur y ajoute une rencontre : date, équipe adverse et salle, sans nom de joueur.</li>
 </ul>
 <p>Aucune publicité, aucun outil de mesure d'audience, aucun traceur, aucun identifiant publicitaire. Google Play fournit à l'éditeur des statistiques de plantage agrégées et anonymes, sans donnée de licencié.</p>
 <h3>Mineurs</h3>
-<p>Pour un licencié de moins de 18 ans, ou dont l'âge n'est pas connu, l'application n'affiche que son nom, son club, ses points et son bilan de la saison, et il ne peut pas être suivi. En cas de doute (homonyme, catégorie absente), le joueur est traité comme un mineur. L'application ne demande ni compte, ni âge, ni identité à ses utilisateurs : elle ne peut donc pas vérifier qu'une licence saisie comme « ta licence » est bien celle de l'utilisateur, seulement qu'elle appartient au club choisi. Pour une licence de mineur, la fiche reste réduite. Public visé sur Google Play : 13 ans et plus.</p>
+<p>Pour un licencié de moins de 18 ans, ou dont l'âge n'est pas connu, l'application n'affiche que son nom, son club, ses points et son bilan en championnat par équipes, et il ne peut pas être suivi. En cas de doute (homonyme, catégorie absente), le joueur est traité comme un mineur. L'application ne demande ni compte, ni âge, ni identité à ses utilisateurs : elle ne peut donc pas vérifier qu'une licence saisie comme « ta licence » est bien celle de l'utilisateur, seulement qu'elle appartient au club choisi. Pour une licence de mineur, la fiche reste réduite. Public visé sur Google Play : 13 ans et plus.</p>
 <h3>Vos droits</h3>
 <ul>
 <li>Utilisateur : effacer toutes ses données dans Réglages › Effacer toutes mes données, ou en désinstallant l'application.</li>
-<li>Licencié affiché : opposition sans justification (voir plus haut) ; accès et rectification auprès de la FFTT.</li>
+<li>Licencié affiché : opposition sans justification (voir « Ne plus apparaître ») ; accès et rectification auprès de la FFTT.</li>
 <li>Question : <a href="mailto:monrdvping@outlook.fr">monrdvping@outlook.fr</a>. Réclamation : Commission nationale de l'informatique et des libertés, <a href="https://www.cnil.fr">cnil.fr</a>.</li>
 </ul>
-<h3>Ce site</h3>
-<p>La page web de l'application et son fichier de configuration sont hébergés par GitHub Pages (GitHub, Inc., États-Unis), qui voit l'adresse IP des visiteurs et des téléphones dans ses journaux techniques, dans le cadre du Data Privacy Framework. La page ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience.</p>
+<h3>Page web, fichier de configuration et messagerie</h3>
+<p>La page web de l'application et son fichier de configuration sont hébergés par GitHub Pages (GitHub, Inc., États-Unis), qui voit l'adresse IP des visiteurs et des téléphones dans ses journaux techniques, dans le cadre du Data Privacy Framework. La page ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience. Les messages envoyés à l'éditeur sont reçus dans une boîte Outlook.com (Microsoft), qui peut les traiter hors de l'Union européenne, également dans le cadre du Data Privacy Framework ; ils sont supprimés dès la réponse envoyée.</p>
 <h3>Modifications</h3>
 <p>Ce texte est le même sur la page web et dans l'application. Toute modification est datée et signalée à la mise à jour suivante de l'application. Version du 27 octobre 2026.</p>
 </section>
